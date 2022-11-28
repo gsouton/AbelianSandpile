@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+            \PYG{c+c1}{// in sandPile.c}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{n}{it} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{it} \PYG{o}{\PYGZlt{}=} \PYG{n}{nb\PYGZus{}iter}\PYG{p}{;} \PYG{n}{it}\PYG{o}{++}\PYG{p}{,} \PYG{n}{iterations}\PYG{o}{++}\PYG{p}{,} \PYG{n}{valid\PYGZus{}copied\PYGZus{}lines}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{c+c1}{// before starting anything we can copy lines}
+                \PYG{k}{if}\PYG{p}{(}\PYG{n}{valid\PYGZus{}copied\PYGZus{}lines} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{1}\PYG{p}{)\PYGZob{}}
+                    \PYG{n}{valid\PYGZus{}copied\PYGZus{}lines} \PYG{o}{=} \PYG{n}{NB\PYGZus{}LINES\PYGZus{}TO\PYGZus{}COPY}\PYG{p}{;}
+                    \PYG{n}{share\PYGZus{}data\PYGZus{}cpu\PYGZus{}gpu}\PYG{p}{();}
+                \PYG{p}{\PYGZcb{}}
+                \PYG{c+c1}{//..}
+            \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

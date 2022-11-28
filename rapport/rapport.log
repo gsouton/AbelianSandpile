@@ -1,0 +1,892 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.7)  4 MAY 2022 02:49
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**rapport.tex
+(./rapport.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count186
+\Gm@cntv=\count187
+\c@Gm@tempcnt=\count188
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/step/step.sty
+Package: step 
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+)
+\XKV@depth=\count189
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+STEP-TLF on input li
+ne 112.
+
+(/usr/share/texlive/texmf-dist/tex/latex/step/T1STEP-TLF.fd
+File: T1STEP-TLF.fd 2021/01/02 (autoinst) Font definitions for T1/STEP-TLF.
+)
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 112.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen149
+\enit@toks=\toks21
+\enit@inbox=\box47
+\enit@count@id=\count190
+\enitdp@description=\count191
+)
+(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count192
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count193
+\FV@InFile=\read2
+\FV@TabBox=\box48
+\c@FancyVerbLine=\count194
+\FV@StepNumber=\count195
+\FV@OutFile=\write3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count196
+\output=\toks22
+\linenoprevgraf=\count197
+\linenumbersep=\dimen150
+\linenumberwidth=\dimen151
+\c@linenumber=\count198
+\c@pagewiselinenumber=\count199
+\c@LN@truepage=\count266
+\c@internallinenumber=\count267
+\c@internallinenumbers=\count268
+\quotelinenumbersep=\dimen152
+\bframerule=\dimen153
+\bframesep=\dimen154
+\bframebox=\box49
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count269
+\c@FV@TrueTabCounter=\count270
+\FV@TabBox@Group=\box50
+\FV@TmpLength=\skip50
+\c@FV@HighlightLinesStart=\count271
+\c@FV@HighlightLinesStop=\count272
+\FV@LoopCount=\count273
+\FV@NCharsBox=\box51
+\FV@BreakIndent=\dimen155
+\FV@BreakIndentNChars=\count274
+\FV@BreakSymbolSepLeft=\dimen156
+\FV@BreakSymbolSepLeftNChars=\count275
+\FV@BreakSymbolSepRight=\dimen157
+\FV@BreakSymbolSepRightNChars=\count276
+\FV@BreakSymbolIndentLeft=\dimen158
+\FV@BreakSymbolIndentLeftNChars=\count277
+\FV@BreakSymbolIndentRight=\dimen159
+\FV@BreakSymbolIndentRightNChars=\count278
+\c@FancyVerbLineBreakLast=\count279
+\FV@LineBox=\box52
+\FV@LineIndentBox=\box53
+\FV@LineWidth=\dimen160
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count280
+\calc@Bcount=\count281
+\calc@Adimen=\dimen161
+\calc@Bdimen=\dimen162
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count282
+\calc@Cskip=\skip53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "rapport.w18")...executed.
+
+ (./rapport.w18)
+runsystem(rm -- "rapport.w18")...executed.
+
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count283
+\decimalpart=\count284
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip54
+\fb@frw=\dimen163
+\fb@frh=\dimen164
+\FrameRule=\dimen165
+\FrameSep=\dimen166
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count285
+\float@exts=\toks23
+\float@box=\box54
+\@float@everytoks=\toks24
+\@floatcapt=\box55
+)
+\minted@appexistsfile=\read3
+\minted@bgbox=\box56
+\minted@code=\write4
+\c@minted@FancyVerbLineTemp=\count286
+\c@minted@pygmentizecounter=\count287
+\@float@every@listing=\toks25
+\c@listing=\count288
+)
+runsystem(mkdir -p _minted-rapport)...executed.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen167
+\Hy@linkcounter=\count289
+\Hy@pagecounter=\count290
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count291
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count292
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen168
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count293
+\Field@Width=\dimen169
+\Fld@charsize=\dimen170
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count294
+\c@Item=\count295
+\c@Hfootnote=\count296
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count297
+\c@bookmark@seq@number=\count298
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip55
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen171
+\ar@mcellbox=\box57
+\extrarowheight=\dimen172
+\NC@list=\toks26
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box58
+)
+\everycr=\toks27
+\minrowclearance=\skip58
+)
+\rownum=\count299
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip59
+\LTright=\skip60
+\LTpre=\skip61
+\LTpost=\skip62
+\LTchunksize=\count300
+\LTcapwidth=\dimen173
+\LT@head=\box59
+\LT@firsthead=\box60
+\LT@foot=\box61
+\LT@lastfoot=\box62
+\LT@cols=\count301
+\LT@rows=\count302
+\c@LT@tables=\count303
+\c@LT@chunks=\count304
+\LT@p@ftn=\toks28
+)
+runsystem(which pygmentize && touch rapport.aex)...executed.
+
+runsystem(rm rapport.aex)...executed.
+
+LaTeX Font Info:    Font shape `T1/STEP-TLF/regular/n' aliased to
+(Font)              `T1/STEP-TLF/m/n' on input line 24.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 24.
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box63
+)
+(./rapport.aux)
+\openout1 = `rapport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@mv@tabular=\count306
+\c@mv@boldtabular=\count307
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count308
+\scratchdimen=\dimen174
+\scratchbox=\box64
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen175
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks30
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 24.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count314
+)
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
+
+(./rapport.out) (./rapport.out)
+\@outlinefile=\write5
+\openout5 = `rapport.out'.
+
+LaTeX Font Info:    Font shape `T1/STEP-TLF/regular/n' aliased to
+(Font)              `T1/STEP-TLF/m/n' on input line 30.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/n' will be
+(Font)              scaled to size 24.88pt on input line 30.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/bold/n' aliased to
+(Font)              `T1/STEP-TLF/b/n' on input line 31.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/b/n' will be
+(Font)              scaled to size 24.88pt on input line 31.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/regular/n' aliased to
+(Font)              `T1/STEP-TLF/m/n' on input line 34.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 34.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/bold/n' aliased to
+(Font)              `T1/STEP-TLF/b/n' on input line 41.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/b/n' will be
+(Font)              scaled to size 17.28pt on input line 41.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/regular/it' aliased to
+(Font)              `T1/STEP-TLF/m/it' on input line 45.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/it' will be
+(Font)              scaled to size 17.28pt on input line 45.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/regular/n' aliased to
+(Font)              `T1/STEP-TLF/m/n' on input line 49.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 49.
+<img/Universite Bordeaux RVB-01.jpg, id=36, 995.72pt x 399.4925pt>
+File: img/Universite Bordeaux RVB-01.jpg Graphic file (type jpg)
+<use img/Universite Bordeaux RVB-01.jpg>
+Package pdftex.def Info: img/Universite Bordeaux RVB-01.jpg  used on input line
+ 54.
+(pdftex.def)             Requested size: 181.18439pt x 72.6919pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/Universite Bordeaux 
+RVB-01.jpg>]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/regular/n' aliased to
+(Font)              `T1/STEP-TLF/m/n' on input line 59.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 59.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/bold/n' aliased to
+(Font)              `T1/STEP-TLF/b/n' on input line 59.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/b/n' will be
+(Font)              scaled to size 20.74pt on input line 59.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/bold/n' aliased to
+(Font)              `T1/STEP-TLF/b/n' on input line 60.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 60.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+1.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/default-pyg-prefix.pygstyle)
+(./_minted-rapport/default.pygstyle)
+(./_minted-rapport/7421BD8C9BDB8F978A9B63A1144F6A0BC787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/CD4A728A7AD532E19CD60F8A4FDE5939C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 61--68
+
+ []
+
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/2D404C4C9E857903292CBFB5115E6489C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+6.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+))
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 98.
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/C7D0F31CF88E6136F6F7F18BF702B758C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/m/n' will be
+(Font)              scaled to size 5.0pt on input line 3.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.138 
+       [1
+
+]
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/2944553B55ACF4CE8B05178435B15398C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/24A9F574003D37B5275B7C58FF578E3BC0F72903C94FBF5C8260FB7B6919
+71A4.pygtex [2])
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/B872D81E9BE348729A60517473EE05C7C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/784249CEDF45926260238A7B0533F495C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/45CA31E19C2A2C51178A03927223ADAEC0F72903C94FBF5C8260FB7B6919
+71A4.pygtex) [3]
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/DC64C4A64905EA9C90837AB488C6D291C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/DC64C4A64905EA9C90837AB488C6D291C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+LaTeX Font Info:    Font shape `T1/STEP-TLF/bold/n' aliased to
+(Font)              `T1/STEP-TLF/b/n' on input line 249.
+LaTeX Font Info:    Font shape `T1/STEP-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 249.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 250.
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/43D9D615FFB7C8D75A1302A592D68511802E7518785E047272E6C24ACB2C
+96E1.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/57F659B7FF2A3ABF2508427419A80AA7802E7518785E047272E6C24ACB2C
+96E1.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/A28C0979AEEC1BE119F367C09536995C802E7518785E047272E6C24ACB2C
+96E1.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/61D69D718CE94F0A434597C542AD07AD802E7518785E047272E6C24ACB2C
+96E1.pygtex [4])
+<img/ocl_iter.png, id=76, 2237.35875pt x 1175.39125pt>
+File: img/ocl_iter.png Graphic file (type png)
+<use img/ocl_iter.png>
+Package pdftex.def Info: img/ocl_iter.png  used on input line 313.
+(pdftex.def)             Requested size: 483.69684pt x 254.10312pt.
+
+Overfull \hbox (30.72894pt too wide) in paragraph at lines 313--315
+ [][] 
+ []
+
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/A6B113F67A95E06584533C869BBBABF1C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex) [5 <./img/ocl_iter.png>]
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/257ADCE1C8B1680F5FC069D4CDE40830802E7518785E047272E6C24ACB2C
+96E1.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/B8AD7B3F862F876B822BF0B6C3B19735802E7518785E047272E6C24ACB2C
+96E1.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/4CECC6C86C3CC829769D07BCE0572692802E7518785E047272E6C24ACB2C
+96E1.pygtex) [6]
+Chapter 2.
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/598BE6F5D0EECC5205E492283B2DEA88C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex) [7
+
+]
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/DC64C4A64905EA9C90837AB488C6D291C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/4ACC70BBABB7FAEA96369F0A14DC03E8C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/99082311B3505EB76627623521173508C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex) [8]
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/A66A35877C8D25B659A45386BB723B79C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/12E58A1093A192E935444FBF30E2AE79802E7518785E047272E6C24ACB2C
+96E1.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/C0175B5DF5B83EFEEBB679BE74685728C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/A0F0A7399573CC9A5D2C98A0D5F63351C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex
+Overfull \hbox (27.36734pt too wide) in paragraph at lines 509--1
+[]\T1/STEP-TLF/m/n/10 We need a way to count the num-ber of copied and valid li
+nes on both \T1/cmtt/m/n/10 CPU\T1/STEP-TLF/m/n/10 and \T1/cmtt/m/n/10 GPU\T1/S
+TEP-TLF/m/n/10 . A vari-able []
+ []
+
+[9])
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/4E02456D4AE4078546759412AB3E79DEC787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/BEBCEC9C200873E466BAFE60A4770F66C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/9BEA4E81AE0540860EBD17FA2E9C4DE5C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/C9B384656B1A1EB5B149464AE4F45226C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/9380A6F243837D359087601C17581E48C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/B449DCE49A9DDD5C3B8125995BA1F2B4C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/4F696A0F17E2778CFB10753F2221E7A2C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/BD64AA131D0D0F17579A0D751D9D80E4C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/267E3935C0E5C4A35D5754F3DD46EAD2C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex) [10]
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/AFF77AECB0EBC595B37A1C348CAFFC06C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/DBD4CCB688FCCCF3B91036D660D32E84C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/0B90B210A2F39F729810B9CB47A92AF3C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex)
+\openout4 = `rapport.pyg'.
+
+
+(./_minted-rapport/70C5C03A65C19342A5532D3638417491C787902EC4AA8CD84F7651E9DE38
+B1DA.pygtex)
+\openout3 = `rapport.pyg'.
+
+
+(./_minted-rapport/55679D5F6E64642A42516081B33A6D24C0F72903C94FBF5C8260FB7B6919
+71A4.pygtex [11]) [12] (./rapport.aux)
+Package rerunfilecheck Info: File `rapport.out' has not changed.
+(rerunfilecheck)             Checksum: AA8724047FD8428ECBC64BAF48A7FD4D;507.
+runsystem(rm rapport.pyg)...executed.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 10928 strings out of 479304
+ 195967 string characters out of 5869780
+ 571661 words of memory out of 5000000
+ 27728 multiletter control sequences out of 15000+600000
+ 436657 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 85i,11n,88p,580b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf
+/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/
+enc/dvips/step/a_euweyh.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/s
+tep/STEP-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/step/STEP-I
+talic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/step/STEP-Regular.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfit1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt
+1000.pfb>
+Output written on rapport.pdf (13 pages, 365397 bytes).
+PDF statistics:
+ 191 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+

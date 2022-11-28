@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{unsigned} \PYG{n+nf}{ssandPile\PYGZus{}invoke\PYGZus{}ocl} \PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{n}{nb\PYGZus{}iter}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{size\PYGZus{}t} \PYG{n}{global}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{GPU\PYGZus{}SIZE\PYGZus{}X}\PYG{p}{,} \PYG{n}{GPU\PYGZus{}SIZE\PYGZus{}Y}\PYG{p}{\PYGZcb{};} \PYG{c+c1}{// global domain size for our calculation}
+    \PYG{k+kt}{size\PYGZus{}t} \PYG{n}{local}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}  \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{GPU\PYGZus{}TILE\PYGZus{}W}\PYG{p}{,} \PYG{n}{GPU\PYGZus{}TILE\PYGZus{}H}\PYG{p}{\PYGZcb{};} \PYG{c+c1}{// local domain size for our calculation}
+    \PYG{n}{cl\PYGZus{}int} \PYG{n}{err}\PYG{p}{;}
+    \PYG{k+kt}{unsigned} \PYG{n}{table}\PYG{p}{[}\PYG{n}{DIM}\PYG{o}{*}\PYG{n}{DIM}\PYG{p}{];}
+
+    \PYG{n}{monitoring\PYGZus{}start\PYGZus{}tile} \PYG{p}{(}\PYG{n}{easypap\PYGZus{}gpu\PYGZus{}lane} \PYG{p}{(}\PYG{n}{TASK\PYGZus{}TYPE\PYGZus{}COMPUTE}\PYG{p}{));}
+
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{n}{it} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{it} \PYG{o}{\PYGZlt{}=} \PYG{n}{nb\PYGZus{}iter}\PYG{p}{;} \PYG{n}{it}\PYG{o}{++}\PYG{p}{,} \PYG{n}{iterations}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Set kernel arguments}
+        \PYG{n}{err} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{cur\PYGZus{}buffer}\PYG{p}{);}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{next\PYGZus{}buffer}\PYG{p}{);}
+        \PYG{n}{check} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Failed to set kernel arguments\PYGZdq{}}\PYG{p}{);}
+
+        \PYG{n}{err} \PYG{o}{=} \PYG{n}{clEnqueueNDRangeKernel} \PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n}{global}\PYG{p}{,} \PYG{n}{local}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{);}
+        \PYG{n}{check} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Failed to execute kernel\PYGZdq{}}\PYG{p}{);}
+
+        \PYG{c+c1}{// Swap buffers}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{cl\PYGZus{}mem} \PYG{n}{tmp}  \PYG{o}{=} \PYG{n}{cur\PYGZus{}buffer}\PYG{p}{;}
+            \PYG{n}{cur\PYGZus{}buffer}  \PYG{o}{=} \PYG{n}{next\PYGZus{}buffer}\PYG{p}{;}
+            \PYG{n}{next\PYGZus{}buffer} \PYG{o}{=} \PYG{n}{tmp}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{clFinish} \PYG{p}{(}\PYG{n}{queue}\PYG{p}{);}
+    \PYG{n}{monitoring\PYGZus{}end\PYGZus{}tile} \PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{easypap\PYGZus{}gpu\PYGZus{}lane} \PYG{p}{(}\PYG{n}{TASK\PYGZus{}TYPE\PYGZus{}COMPUTE}\PYG{p}{));}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

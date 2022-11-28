@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{\PYGZus{}\PYGZus{}kernel} \PYG{k+kt}{void} \PYG{n}{ssandPile\PYGZus{}ocl} \PYG{p}{(}\PYG{n}{\PYGZus{}\PYGZus{}global} \PYG{k+kt}{unsigned} \PYG{o}{*}\PYG{n}{in}\PYG{p}{,} \PYG{n}{\PYGZus{}\PYGZus{}global} \PYG{k+kt}{unsigned} \PYG{o}{*}\PYG{n}{out}\PYG{p}{,} \PYG{n}{\PYGZus{}\PYGZus{}global} \PYG{k+kt}{unsigned} \PYG{o}{*}\PYG{n}{buffer}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// previous operation to compute a cell}
+
+        \PYG{c+c1}{// store current state of the cell}
+        \PYG{n}{buffer}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]} \PYG{o}{=} \PYG{n}{out}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

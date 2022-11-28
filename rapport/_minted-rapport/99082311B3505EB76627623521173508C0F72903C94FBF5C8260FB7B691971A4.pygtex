@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// exchanging one line between cpu and gpu where NB\PYGZus{}LINE\PYGZus{}TO\PYGZus{}COPY=1}
+\PYG{k}{static} \PYG{k+kr}{inline} \PYG{k+kt}{void} \PYG{n}{share\PYGZus{}data\PYGZus{}cpu\PYGZus{}gpu}\PYG{p}{()\PYGZob{}}
+    \PYG{c+c1}{// gpu to cpu}
+    \PYG{n}{check}\PYG{p}{(}\PYG{n}{clEnqueueReadBuffer}\PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{cur\PYGZus{}buffer}\PYG{p}{,} \PYG{n}{CL\PYGZus{}TRUE}\PYG{p}{,}
+                        \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{p}{(}\PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{o}{\PYGZhy{}}\PYG{n}{NB\PYGZus{}LINES\PYGZus{}TO\PYGZus{}COPY}\PYG{p}{),}
+                        \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{n}{NB\PYGZus{}LINES\PYGZus{}TO\PYGZus{}COPY}\PYG{p}{,}
+                        \PYG{n}{table\PYGZus{}cell}\PYG{p}{(}\PYG{n}{TABLE}\PYG{p}{,} \PYG{n}{in}\PYG{p}{,} \PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{o}{\PYGZhy{}}\PYG{n}{NB\PYGZus{}LINES\PYGZus{}TO\PYGZus{}COPY}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{),}
+                        \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{),}
+                        \PYG{l+s}{\PYGZdq{}Failed to Read from queue\PYGZdq{}}\PYG{p}{);}
+    \PYG{c+c1}{// cpu to gpu}
+    \PYG{n}{check}\PYG{p}{(}\PYG{n}{clEnqueueWriteBuffer}\PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{cur\PYGZus{}buffer}\PYG{p}{,} \PYG{n}{CL\PYGZus{}TRUE}\PYG{p}{,}
+                        \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{p}{(}\PYG{n}{cpu\PYGZus{}y\PYGZus{}begin}\PYG{p}{),}
+                        \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{n}{NB\PYGZus{}LINES\PYGZus{}TO\PYGZus{}COPY}\PYG{p}{,}
+                        \PYG{n}{table\PYGZus{}cell}\PYG{p}{(}\PYG{n}{TABLE}\PYG{p}{,} \PYG{n}{in}\PYG{p}{,} \PYG{n}{cpu\PYGZus{}y\PYGZus{}begin}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{),}
+                        \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{),} \PYG{l+s}{\PYGZdq{}Failed to Write to queue\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

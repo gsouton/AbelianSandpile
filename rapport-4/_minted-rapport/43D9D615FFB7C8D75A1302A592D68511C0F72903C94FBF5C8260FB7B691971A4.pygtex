@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{.}\PYG{o}{/}\PYG{n}{run} \PYG{o}{\PYGZhy{}}\PYG{n}{k} \PYG{n}{ssandPile} \PYG{o}{\PYGZhy{}}\PYG{n}{o} \PYG{o}{\PYGZhy{}}\PYG{n}{v} \PYG{n}{ocl} \PYG{o}{\PYGZhy{}}\PYG{n}{s} \PYG{l+m+mi}{512} \PYG{o}{\PYGZhy{}}\PYG{n}{i} \PYG{l+m+mi}{69190} \PYG{o}{\PYGZhy{}}\PYG{n}{n}
+\PYG{n}{Using} \PYG{n}{kernel} \PYG{p}{[}\PYG{n}{ssandPile}\PYG{p}{],} \PYG{n}{variant} \PYG{p}{[}\PYG{n}{ocl}\PYG{p}{],} \PYG{n}{tiling} \PYG{p}{[}\PYG{k}{default}\PYG{p}{]}
+\PYG{n}{Using} \PYG{n}{OpenCL} \PYG{n+nl}{Device}\PYG{p}{:} \PYG{n}{GPU} \PYG{p}{[}\PYG{n}{GeForce} \PYG{n}{RTX} \PYG{l+m+mi}{2070}\PYG{p}{]}
+\PYG{n}{Using} \PYG{l+m+mi}{512}\PYG{n}{x512} \PYG{n}{workitems} \PYG{n}{grouped} \PYG{n}{in} \PYG{l+m+mi}{16}\PYG{n}{x16} \PYG{n}{tiles}
+\PYG{n}{Computation} \PYG{n}{completed} \PYG{n}{after} \PYG{l+m+mi}{69190} \PYG{n}{iterations}
+\PYG{l+m+mf}{379.833}
+\end{Verbatim}

@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{\PYGZus{}\PYGZus{}kernel} \PYG{k+kt}{void} \PYG{n}{ssandPile\PYGZus{}ocl} \PYG{p}{(}\PYG{n}{\PYGZus{}\PYGZus{}global} \PYG{k+kt}{unsigned} \PYG{o}{*}\PYG{n}{in}\PYG{p}{,} \PYG{n}{\PYGZus{}\PYGZus{}global} \PYG{k+kt}{unsigned} \PYG{o}{*}\PYG{n}{out}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+      \PYG{k+kt}{int} \PYG{n}{x} \PYG{o}{=} \PYG{n}{get\PYGZus{}global\PYGZus{}id} \PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+      \PYG{k+kt}{int} \PYG{n}{y} \PYG{o}{=} \PYG{n}{get\PYGZus{}global\PYGZus{}id} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+
+      \PYG{c+c1}{// checking that we don\PYGZsq{}t do the border}
+      \PYG{k+kt}{int} \PYG{n}{tp\PYGZus{}exist} \PYG{o}{=} \PYG{n}{y} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{;}
+      \PYG{k+kt}{int} \PYG{n}{bt\PYGZus{}exist} \PYG{o}{=} \PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{p}{(}\PYG{n}{DIM} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{);}
+
+      \PYG{k+kt}{int} \PYG{n}{l\PYGZus{}exist} \PYG{o}{=} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{;}
+      \PYG{k+kt}{int} \PYG{n}{r\PYGZus{}exist} \PYG{o}{=} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{p}{(}\PYG{n}{DIM} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{);}
+
+      \PYG{k+kt}{int} \PYG{n}{current} \PYG{o}{=} \PYG{n}{y} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{+} \PYG{n}{x}\PYG{p}{;}
+      \PYG{k+kt}{int} \PYG{n}{c\PYGZus{}exist} \PYG{o}{=} \PYG{n}{tp\PYGZus{}exist} \PYG{o}{\PYGZam{}} \PYG{n}{bt\PYGZus{}exist} \PYG{o}{\PYGZam{}} \PYG{n}{l\PYGZus{}exist} \PYG{o}{\PYGZam{}} \PYG{n}{r\PYGZus{}exist}\PYG{p}{;}
+
+      \PYG{k+kt}{int} \PYG{n}{top} \PYG{o}{=} \PYG{p}{((}\PYG{n}{y}\PYG{o}{\PYGZhy{}}\PYG{n}{tp\PYGZus{}exist}\PYG{p}{)}\PYG{o}{*}\PYG{n}{DIM}\PYG{o}{+}\PYG{n}{x}\PYG{p}{);}
+      \PYG{k+kt}{int} \PYG{n}{bottom} \PYG{o}{=} \PYG{p}{((}\PYG{n}{y}\PYG{o}{+}\PYG{n}{bt\PYGZus{}exist}\PYG{p}{)}\PYG{o}{*}\PYG{n}{DIM}\PYG{o}{+}\PYG{n}{x}\PYG{p}{);}
+      \PYG{k+kt}{int} \PYG{n}{left} \PYG{o}{=} \PYG{p}{(}\PYG{n}{y}\PYG{o}{*}\PYG{n}{DIM}\PYG{o}{+}\PYG{p}{(}\PYG{n}{x}\PYG{o}{\PYGZhy{}}\PYG{n}{l\PYGZus{}exist}\PYG{p}{));}
+      \PYG{k+kt}{int} \PYG{n}{right} \PYG{o}{=} \PYG{p}{(}\PYG{n}{y}\PYG{o}{*}\PYG{n}{DIM}\PYG{o}{+}\PYG{p}{(}\PYG{n}{x}\PYG{o}{+}\PYG{n}{r\PYGZus{}exist}\PYG{p}{));}
+
+      \PYG{c+c1}{//out = current \PYGZpc{}4 + top/4 + bottom/4 + left/4 + right/4}
+      \PYG{n}{out}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{c\PYGZus{}exist} \PYG{o}{+}
+                     \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{top}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{tp\PYGZus{}exist} \PYG{o}{+}
+                     \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{bottom}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{bt\PYGZus{}exist} \PYG{o}{+}
+                     \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{left}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{l\PYGZus{}exist} \PYG{o}{+}
+                     \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{right}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{r\PYGZus{}exist}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+                \PYG{k}{static} \PYG{k+kt}{unsigned} \PYG{n}{valid\PYGZus{}copied\PYGZus{}lines}\PYG{p}{;}
+                \PYG{c+c1}{// set the number of copied line to 0 at the begining}
+                \PYG{k+kt}{void} \PYG{n+nf}{ssandPile\PYGZus{}init\PYGZus{}ocl\PYGZus{}hybrid}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)\PYGZob{}}
+                    \PYG{c+c1}{// init buffer and other variable}
+                    \PYG{n}{valid\PYGZus{}copied\PYGZus{}lines} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

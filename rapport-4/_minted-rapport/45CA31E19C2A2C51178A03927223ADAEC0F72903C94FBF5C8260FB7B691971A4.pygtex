@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{static} \PYG{k+kr}{inline} \PYG{k+kt}{int} \PYG{n}{is\PYGZus{}stable}\PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{o}{*}\PYG{n}{table}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{DIM}\PYG{o}{*}\PYG{n}{DIM}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{table}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+            \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{static} \PYG{k+kt}{int} \PYG{k+kr}{inline} \PYG{n}{check\PYGZus{}stability}\PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{o}{*}\PYG{n}{table}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{expected\PYGZus{}iteration} \PYG{o}{==} \PYG{n}{iterations}\PYG{p}{)\PYGZob{}}
+        \PYG{n}{iterations} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{clEnqueueReadBuffer}\PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{buffer}\PYG{p}{,} \PYG{n}{CL\PYGZus{}TRUE}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{table}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{);}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{is\PYGZus{}stable}\PYG{p}{(}\PYG{n}{table}\PYG{p}{))\PYGZob{}}
+            \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

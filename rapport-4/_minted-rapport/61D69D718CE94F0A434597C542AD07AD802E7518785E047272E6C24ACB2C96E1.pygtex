@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+./run \PYGZhy{}k ssandPile \PYGZhy{}o \PYGZhy{}v ocl\PYGZus{}term \PYGZhy{}s 512 \PYGZhy{}n
+Using kernel [ssandPile], variant [ocl\PYGZus{}term], tiling [default]
+Using OpenCL Device: GPU [NVIDIA GeForce RTX 3060]
+Using 512x512 workitems grouped in 16x16 tiles
+Initialize term ocl
+Computation completed after 70001 iterations
+1093.083
+\end{Verbatim}

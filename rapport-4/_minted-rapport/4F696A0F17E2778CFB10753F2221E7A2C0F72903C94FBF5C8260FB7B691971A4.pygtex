@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+                \PYG{c+c1}{//in sandPile.cl}
+                \PYG{k}{if}\PYG{p}{(}\PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{n}{gpu\PYGZus{}y\PYGZus{}end} \PYG{o}{+} \PYG{n}{valid\PYGZus{}copied\PYGZus{}lines}\PYG{p}{)\PYGZob{}}
+                    \PYG{c+c1}{//other verification...}
+                    \PYG{n}{out}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{c\PYGZus{}exist} \PYG{o}{+}
+                                  \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{top}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{tp\PYGZus{}exist} \PYG{o}{+}
+                                  \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{bottom}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{bt\PYGZus{}exist} \PYG{o}{+}
+                                  \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{left}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{l\PYGZus{}exist} \PYG{o}{+}
+                                  \PYG{p}{(}\PYG{n}{in}\PYG{p}{[}\PYG{n}{right}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{*} \PYG{n}{r\PYGZus{}exist}\PYG{p}{;}
+
+                    \PYG{n}{buffer}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]} \PYG{o}{=} \PYG{n}{out}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{;}
+                \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

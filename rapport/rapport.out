@@ -1,0 +1,8 @@
+\BOOKMARK [0][-]{chapter.1}{OpenCL implementation}{}% 1
+\BOOKMARK [1][-]{section.1.1}{OpenCL kernel}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Detecting termination}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Approximate iterations}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{OpenCL + OpenMP}{}% 5
+\BOOKMARK [1][-]{section.2.1}{First naive implementation}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Exchanging more than one line}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Load Balancing}{chapter.2}% 8

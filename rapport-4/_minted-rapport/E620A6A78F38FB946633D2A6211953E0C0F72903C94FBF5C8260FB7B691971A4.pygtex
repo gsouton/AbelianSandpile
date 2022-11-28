@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{unsigned} \PYG{n+nf}{ssandPile\PYGZus{}invoke\PYGZus{}ocl} \PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{n}{nb\PYGZus{}iter}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// domain variables}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{n}{it} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{it} \PYG{o}{\PYGZlt{}=} \PYG{n}{nb\PYGZus{}iter}\PYG{p}{;} \PYG{n}{it}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Set kernel arguments}
+        \PYG{n}{err} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{cur\PYGZus{}buffer}\PYG{p}{);}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{next\PYGZus{}buffer}\PYG{p}{);}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{buffer}\PYG{p}{);}
+        \PYG{n}{check} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Failed to set kernel arguments\PYGZdq{}}\PYG{p}{);}
+        \PYG{c+c1}{// execute kernel}
+        \PYG{c+c1}{// swap buffers}
+
+        \PYG{c+c1}{// read data from the buffer}
+        \PYG{n}{clEnqueueReadBuffer}\PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{buffer}\PYG{p}{,} \PYG{n}{CL\PYGZus{}TRUE}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{table}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{);}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{is\PYGZus{}stable}\PYG{p}{(}\PYG{n}{table}\PYG{p}{))\PYGZob{}}
+            \PYG{n}{clFinish} \PYG{p}{(}\PYG{n}{queue}\PYG{p}{);}
+            \PYG{n}{monitoring\PYGZus{}end\PYGZus{}tile} \PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{easypap\PYGZus{}gpu\PYGZus{}lane} \PYG{p}{(}\PYG{n}{TASK\PYGZus{}TYPE\PYGZus{}COMPUTE}\PYG{p}{));}
+            \PYG{k}{return} \PYG{n}{it}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{c+c1}{// finish}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

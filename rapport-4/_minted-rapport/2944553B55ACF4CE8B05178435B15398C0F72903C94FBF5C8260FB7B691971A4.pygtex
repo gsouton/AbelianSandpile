@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{static} \PYG{n}{cl\PYGZus{}mem} \PYG{n}{buffer}\PYG{p}{;}
+
+\PYG{k+kt}{void} \PYG{n+nf}{ssandPile\PYGZus{}init\PYGZus{}ocl}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)\PYGZob{}}
+    \PYG{n}{ssandPile\PYGZus{}init}\PYG{p}{();}
+    \PYG{n}{buffer} \PYG{o}{=} \PYG{n}{clCreateBuffer}\PYG{p}{(}\PYG{n}{context}\PYG{p}{,} \PYG{n}{CL\PYGZus{}MEM\PYGZus{}READ\PYGZus{}WRITE}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{n}{DIM}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

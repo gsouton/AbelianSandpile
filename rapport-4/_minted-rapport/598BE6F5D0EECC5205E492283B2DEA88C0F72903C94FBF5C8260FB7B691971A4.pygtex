@@ -1,0 +1,48 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{unsigned} \PYG{n+nf}{ssandPile\PYGZus{}invoke\PYGZus{}ocl\PYGZus{}hybrid} \PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{n}{nb\PYGZus{}iter}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// global domain size for our calculation}
+    \PYG{k+kt}{size\PYGZus{}t} \PYG{n}{global}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{GPU\PYGZus{}SIZE\PYGZus{}X}\PYG{p}{,} \PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{p}{\PYGZcb{};}
+    \PYG{c+c1}{// local domain size for our calculation}
+    \PYG{k+kt}{size\PYGZus{}t} \PYG{n}{local}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}  \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{GPU\PYGZus{}TILE\PYGZus{}W}\PYG{p}{,} \PYG{n}{GPU\PYGZus{}TILE\PYGZus{}H}\PYG{p}{\PYGZcb{};}
+    \PYG{n}{cl\PYGZus{}int} \PYG{n}{err}\PYG{p}{;}
+    \PYG{n}{cl\PYGZus{}event} \PYG{n}{kernel\PYGZus{}event}\PYG{p}{;}
+    \PYG{n}{monitoring\PYGZus{}start\PYGZus{}tile} \PYG{p}{(}\PYG{n}{easypap\PYGZus{}gpu\PYGZus{}lane} \PYG{p}{(}\PYG{n}{TASK\PYGZus{}TYPE\PYGZus{}COMPUTE}\PYG{p}{));}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{unsigned} \PYG{n}{it} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{it} \PYG{o}{\PYGZlt{}=} \PYG{n}{nb\PYGZus{}iter}\PYG{p}{;} \PYG{n}{it}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// GPU part}
+        \PYG{n}{err} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{cur\PYGZus{}buffer}\PYG{p}{);}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{next\PYGZus{}buffer}\PYG{p}{);}
+        \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cl\PYGZus{}mem}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{buffer}\PYG{p}{);}
+        \PYG{n}{check} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Failed to set kernel arguments\PYGZdq{}}\PYG{p}{);}
+
+        \PYG{c+c1}{// Launch GPU kernel}
+        \PYG{n}{err} \PYG{o}{=} \PYG{n}{clEnqueueNDRangeKernel} \PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,}
+                                    \PYG{n}{global}\PYG{p}{,} \PYG{n}{local}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{kernel\PYGZus{}event}\PYG{p}{);}
+        \PYG{n}{check} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Failed to execute kernel\PYGZdq{}}\PYG{p}{);}
+
+        \PYG{c+c1}{// Swap buffers}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{cl\PYGZus{}mem} \PYG{n}{tmp}  \PYG{o}{=} \PYG{n}{cur\PYGZus{}buffer}\PYG{p}{;}
+            \PYG{n}{cur\PYGZus{}buffer}  \PYG{o}{=} \PYG{n}{next\PYGZus{}buffer}\PYG{p}{;}
+            \PYG{n}{next\PYGZus{}buffer} \PYG{o}{=} \PYG{n}{tmp}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{c+c1}{// CPU part}
+        \PYG{c+cp}{\PYGZsh{}pragma omp parallel for collapse(2) schedule(runtime)}
+        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{y} \PYG{o}{=} \PYG{n}{cpu\PYGZus{}y\PYGZus{}begin}\PYG{p}{;} \PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{n}{DIM}\PYG{p}{;} \PYG{n}{y}\PYG{o}{+=}\PYG{n}{TILE\PYGZus{}H}\PYG{p}{)\PYGZob{}}
+            \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n}{DIM}\PYG{p}{;} \PYG{n}{x} \PYG{o}{+=} \PYG{n}{TILE\PYGZus{}W}\PYG{p}{)\PYGZob{}}
+                \PYG{k+kt}{int} \PYG{n}{begin\PYGZus{}x} \PYG{o}{=} \PYG{n}{x} \PYG{o}{+} \PYG{p}{(}\PYG{n}{x} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{);}
+                \PYG{k+kt}{int} \PYG{n}{begin\PYGZus{}y} \PYG{o}{=} \PYG{n}{y} \PYG{o}{+} \PYG{p}{(}\PYG{n}{y} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{);}
+                \PYG{k+kt}{int} \PYG{n}{width} \PYG{o}{=} \PYG{n}{TILE\PYGZus{}W} \PYG{o}{\PYGZhy{}} \PYG{p}{((}\PYG{n}{x} \PYG{o}{+} \PYG{n}{TILE\PYGZus{}W} \PYG{o}{==} \PYG{n}{DIM}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n}{x} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{));}
+                \PYG{k+kt}{int} \PYG{n}{height} \PYG{o}{=} \PYG{n}{TILE\PYGZus{}H} \PYG{o}{\PYGZhy{}} \PYG{p}{((}\PYG{n}{y} \PYG{o}{+} \PYG{n}{TILE\PYGZus{}H} \PYG{o}{==} \PYG{n}{DIM}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n}{y} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{));}
+                \PYG{n}{ssandPile\PYGZus{}do\PYGZus{}tile\PYGZus{}opt}\PYG{p}{(}\PYG{n}{begin\PYGZus{}x}\PYG{p}{,} \PYG{n}{begin\PYGZus{}y}\PYG{p}{,} \PYG{n}{width}\PYG{p}{,} \PYG{n}{height}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{swap\PYGZus{}tables}\PYG{p}{();}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{clFinish} \PYG{p}{(}\PYG{n}{queue}\PYG{p}{);}
+    \PYG{n}{clReleaseEvent}\PYG{p}{(}\PYG{n}{kernel\PYGZus{}event}\PYG{p}{);}
+    \PYG{n}{monitoring\PYGZus{}end\PYGZus{}tile} \PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{DIM}\PYG{p}{,} \PYG{n}{easypap\PYGZus{}gpu\PYGZus{}lane} \PYG{p}{(}\PYG{n}{TASK\PYGZus{}TYPE\PYGZus{}COMPUTE}\PYG{p}{));}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

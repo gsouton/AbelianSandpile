@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}define THRESHOLD 10}
+\PYG{c+cp}{\PYGZsh{}define NB\PYGZus{}LINES\PYGZus{}TO\PYGZus{}COPY 10}
+\PYG{k}{static} \PYG{k+kt}{unsigned} \PYG{n}{cpu\PYGZus{}y\PYGZus{}begin}\PYG{p}{;} \PYG{c+c1}{// the cpu does the tile from 0 to cpu\PYGZus{}y\PYGZus{}end}
+\PYG{k}{static} \PYG{k+kt}{unsigned} \PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{p}{;} \PYG{c+c1}{// the gpu does the tile from gpu\PYGZus{}y\PYGZus{}begin to DIM}
+\PYG{k}{static} \PYG{k+kt}{unsigned} \PYG{n}{valid\PYGZus{}copied\PYGZus{}lines}\PYG{p}{;}
+\PYG{k}{static} \PYG{k+kt}{long} \PYG{n}{gpu\PYGZus{}duration} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{k}{static} \PYG{k+kt}{long} \PYG{n}{cpu\PYGZus{}duration} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{c+c1}{// return true if the difference t1 t2 is bigger}
+\PYG{k}{static} \PYG{k+kt}{int} \PYG{n}{compare\PYGZus{}time}\PYG{p}{(}\PYG{k+kt}{long} \PYG{n}{t1}\PYG{p}{,} \PYG{k+kt}{long} \PYG{n}{t2}\PYG{p}{,} \PYG{k+kt}{long} \PYG{n}{threshold}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{return} \PYG{p}{(}\PYG{n}{t1} \PYG{o}{\PYGZgt{}} \PYG{n}{t2}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{((}\PYG{n}{t1}\PYG{o}{\PYGZhy{}}\PYG{n}{t2}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{o}{/}\PYG{n}{t1} \PYG{o}{\PYGZgt{}} \PYG{n}{threshold}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

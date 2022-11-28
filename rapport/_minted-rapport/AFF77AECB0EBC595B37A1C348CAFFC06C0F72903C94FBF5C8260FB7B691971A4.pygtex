@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{static} \PYG{k+kr}{inline} \PYG{k+kt}{void} \PYG{n}{balance\PYGZus{}load}\PYG{p}{(}\PYG{k+kt}{size\PYGZus{}t} \PYG{o}{*}\PYG{n}{global}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{gpu\PYGZus{}y\PYGZus{}end} \PYG{o}{\PYGZlt{}} \PYG{n}{DIM} \PYG{o}{\PYGZhy{}} \PYG{n}{NB\PYGZus{}LINES\PYGZus{}TO\PYGZus{}COPY} \PYG{o}{\PYGZhy{}} \PYG{p}{(} \PYG{n}{GPU\PYGZus{}TILE\PYGZus{}H}\PYG{p}{)}
+        \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{compare\PYGZus{}time}\PYG{p}{(}\PYG{n}{cpu\PYGZus{}duration}\PYG{p}{,} \PYG{n}{gpu\PYGZus{}duration}\PYG{p}{,} \PYG{n}{THRESHOLD}\PYG{p}{))\PYGZob{}}
+        \PYG{c+c1}{// copy the missing part from cpu to gpu}
+        \PYG{n}{check}\PYG{p}{(}\PYG{n}{clEnqueueWriteBuffer}\PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{cur\PYGZus{}buffer}\PYG{p}{,} \PYG{n}{CL\PYGZus{}TRUE}\PYG{p}{,}
+                            \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{p}{(}\PYG{n}{cpu\PYGZus{}y\PYGZus{}begin}\PYG{p}{),}
+                            \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{n}{GPU\PYGZus{}TILE\PYGZus{}H}\PYG{p}{,}
+                            \PYG{n}{table\PYGZus{}cell}\PYG{p}{(}\PYG{n}{TABLE}\PYG{p}{,} \PYG{n}{in}\PYG{p}{,} \PYG{n}{cpu\PYGZus{}y\PYGZus{}begin}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{),}
+                            \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{),}
+                            \PYG{l+s}{\PYGZdq{}Failed to Write to queue\PYGZdq{}}\PYG{p}{);}
+        \PYG{c+c1}{// fprintf(stderr, \PYGZdq{}changing cpu/gpu border\PYGZbs{}n\PYGZdq{});}
+        \PYG{n}{global}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{GPU\PYGZus{}TILE\PYGZus{}H}\PYG{p}{;}
+        \PYG{n}{gpu\PYGZus{}y\PYGZus{}end} \PYG{o}{+=} \PYG{n}{GPU\PYGZus{}TILE\PYGZus{}H}\PYG{p}{;}
+        \PYG{n}{cpu\PYGZus{}y\PYGZus{}begin} \PYG{o}{=} \PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{p}{;}
+        \PYG{c+c1}{// debug(global);}
+        \PYG{c+c1}{// fprintf(stderr, \PYGZdq{}\PYGZbs{}n\PYGZdq{});}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

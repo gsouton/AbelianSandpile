@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{ssandPile\PYGZus{}init\PYGZus{}ocl\PYGZus{}hybrid}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)\PYGZob{}}
+    \PYG{n}{ssandPile\PYGZus{}init}\PYG{p}{();}
+    \PYG{n}{buffer} \PYG{o}{=} \PYG{n}{clCreateBuffer}\PYG{p}{(}\PYG{n}{context}\PYG{p}{,} \PYG{n}{CL\PYGZus{}MEM\PYGZus{}READ\PYGZus{}WRITE}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{)} \PYG{o}{*} \PYG{n}{DIM} \PYG{o}{*} \PYG{n}{DIM}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{,} \PYG{n+nb}{NULL}\PYG{p}{);}
+    \PYG{n}{gpu\PYGZus{}y\PYGZus{}end} \PYG{o}{=} \PYG{p}{(}\PYG{n}{NB\PYGZus{}TILES\PYGZus{}Y}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{*} \PYG{n}{GPU\PYGZus{}TILE\PYGZus{}H}\PYG{p}{;} \PYG{c+c1}{//cautious GPU\PYGZus{}TILE\PYGZus{}H is not always same as TILE\PYGZus{}H}
+    \PYG{n}{cpu\PYGZus{}y\PYGZus{}begin} \PYG{o}{=} \PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{k+kt}{long} \PYG{n}{t1}\PYG{p}{,} \PYG{n}{t2}\PYG{p}{;}
+        \PYG{n}{cl\PYGZus{}event} \PYG{n}{kernel\PYGZus{}event}\PYG{p}{;}
+        \PYG{c+c1}{//..}
+        \PYG{n}{t1} \PYG{o}{=} \PYG{n}{what\PYGZus{}time\PYGZus{}is\PYGZus{}it}\PYG{p}{();}
+        \PYG{c+cp}{\PYGZsh{}pragma omp parallel for collapse(2) schedule(runtime)}
+        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{y} \PYG{o}{=} \PYG{n}{cpu\PYGZus{}y\PYGZus{}begin}\PYG{p}{;} \PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{n}{DIM}\PYG{p}{;} \PYG{n}{y}\PYG{o}{+=}\PYG{n}{TILE\PYGZus{}H}\PYG{p}{)\PYGZob{}}
+            \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n}{DIM}\PYG{p}{;} \PYG{n}{x} \PYG{o}{+=} \PYG{n}{TILE\PYGZus{}W}\PYG{p}{)}
+                \PYG{c+c1}{// do tile}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{swap\PYGZus{}tables}\PYG{p}{();}
+        \PYG{n}{gpu\PYGZus{}duration} \PYG{o}{=} \PYG{n}{ocl\PYGZus{}monitor}\PYG{p}{(}\PYG{n}{kernel\PYGZus{}event}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{p}{,} \PYG{n}{global}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],}
+                                \PYG{n}{global}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{TASK\PYGZus{}TYPE\PYGZus{}COMPUTE}\PYG{p}{);}
+
+        \PYG{c+c1}{// Measure time}
+        \PYG{n}{t2} \PYG{o}{=} \PYG{n}{what\PYGZus{}time\PYGZus{}is\PYGZus{}it}\PYG{p}{();}
+        \PYG{n}{cpu\PYGZus{}duration} \PYG{o}{=} \PYG{n}{t2} \PYG{o}{\PYGZhy{}} \PYG{n}{t1}\PYG{p}{;}
+\end{Verbatim}

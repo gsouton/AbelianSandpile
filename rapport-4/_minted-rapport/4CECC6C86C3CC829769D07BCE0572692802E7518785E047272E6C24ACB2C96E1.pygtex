@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+./run \PYGZhy{}k ssandPile \PYGZhy{}o \PYGZhy{}v ocl \PYGZhy{}s 512 \PYGZhy{}n \PYGZhy{}i 69200
+Using kernel [ssandPile], variant [ocl], tiling [default]
+Using OpenCL Device: GPU [GeForce RTX 2070]
+Using 512x512 workitems grouped in 16x16 tiles
+Computation completed after 69200 iterations
+380.713
+\end{Verbatim}

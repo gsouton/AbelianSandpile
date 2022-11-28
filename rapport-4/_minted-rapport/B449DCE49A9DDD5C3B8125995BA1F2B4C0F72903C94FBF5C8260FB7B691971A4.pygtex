@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+                \PYG{c+c1}{// in invoke\PYGZus{}ocl\PYGZus{}hybrid for the CPU part ...}
+                \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{gpu\PYGZus{}y\PYGZus{}end}\PYG{p}{);}
+                \PYG{n}{err} \PYG{o}{|=} \PYG{n}{clSetKernelArg}\PYG{p}{(}\PYG{n}{compute\PYGZus{}kernel}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{unsigned}\PYG{p}{),} \PYG{o}{\PYGZam{}}\PYG{n}{valid\PYGZus{}copied\PYGZus{}lines}\PYG{p}{);}
+\end{Verbatim}
